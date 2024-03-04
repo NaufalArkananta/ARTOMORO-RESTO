@@ -1,0 +1,44 @@
+footer {
+  display: flex;
+  justify-content: center; /* Untuk menengahkan footer secara horizontal */
+  align-items: center; /* Untuk menengahkan footer secara vertikal */
+  background-color: #79480e;
+  padding: 20px 0; /* Sesuaikan dengan kebutuhan Anda */
+}
+
+.footer {
+  width: 80%; /* Sesuaikan dengan lebar footer yang Anda inginkan */
+}
+
+/* Styling untuk konten footer Anda */
+.footer .main {
+  display: flex;
+  justify-content: space-between; /* Untuk memisahkan kolom-kolom dengan jarak yang sama */
+}
+
+.footer .col {
+  flex: 1;
+  margin: 0 10px; /* Untuk memberi jarak antar kolom */
+}
+
+.footer h4 {
+  color: white; /* Warna teks untuk judul */
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: white; /* Warna teks untuk tautan */
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline; /* Efek saat tautan dihover */
+}

@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(0, 0, 0);
+}
+
+.banner {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+}
+
+.slider {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+  height: 500px;
+}
+
+/*css for manual slide */
+
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #79480e;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: #79480e;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+/*css for automatic*/
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid #79480e;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #79480e;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #79480e;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #79480e;
+}
+
+.kategorimenu {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+
+/* css for kategori */
+
+.container {
+  /* Menengahkan kartu secara horizontal */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+  justify-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Menengahkan konten kartu secara vertikal */
+  padding: 10px;
+  color: white;
+  border: 2px solid white;
+}
+
+.card button {
+  background-color: #00d948;
+  padding: 5px 25px;
+  border-radius: 12px;
+}
+
+.img-box {
+  width: 200px;
+}
+
+.img-box img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
