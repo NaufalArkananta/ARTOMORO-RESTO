@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(0, 0, 0);
+}
+
+.container-pencarian {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Menjadikan kontainer setinggi layar */
+  background-image: url("https://pariwisataindonesia.id/wp-content/uploads/2020/05/Rumah-Adat-Joglo-kompasiana.com_.jpg"); /* Ganti 'background.jpg' dengan URL atau path gambar latar belakang Anda */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-pencarian h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.container-pencarian form {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.container-pencarian form input[type="text"] {
+  padding: 10px 250px; /* Ubah padding untuk menyesuaikan dengan ukuran tombol yang lebih besar */
+  background-color: #33333300;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto; /* Mengatur lebar tombol menjadi otomatis */
+}
+.container-pencarian form input[type="submit"] {
+  padding: 10px 10px; /* Ubah padding untuk menyesuaikan dengan ukuran tombol yang lebih besar */
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto; /* Mengatur lebar tombol menjadi otomatis */
+}
+
+.container-pencarian form input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* About */
+.Container-About {
+  display: flex;
+  justify-content: center; /* Menengahkan secara horizontal */
+  align-items: center; /* Menengahkan secara vertikal */
+  padding: 10px; /* Menyesuaikan ketinggian sesuai kebutuhan */
+}
+
+.about-us {
+  color: white;
+  text-align: center; /* Menengahkan teks secara horizontal */
+  max-width: 1200px; /* Menetapkan lebar maksimum untuk konten */
+}
+
+/* Card */
+
+.judul {
+  display: flex;
+  justify-content: space-between; /* Menempatkan elemen di sisi kanan dan kiri */
+  align-items: center; /* Memusatkan elemen secara vertikal */
+  color: white; /* Mengatur warna teks menjadi putih */
+  padding: 20px;
+}
+
+.judul h2 {
+  margin: 0; /* Menghilangkan margin bawaan dari h2 */
+}
+
+.judul a {
+  text-decoration: none; /* Menghapus garis bawah dari tautan */
+  color: white; /* Mengatur warna teks tautan menjadi putih */
+}
+
+.container-card {
+  /* Menengahkan kartu secara horizontal */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Membuat tiga kolom */
+  grid-auto-rows: auto; /* Tinggi baris akan disesuaikan dengan isi */
+  grid-gap: 10px; /* Jarak antara kartu */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Menengahkan konten kartu secara vertikal */
+  padding: 10px;
+  color: white;
+}
+
+.img-box {
+  width: 200px;
+}
+
+.img-box img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
