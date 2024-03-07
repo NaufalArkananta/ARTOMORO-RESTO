@@ -8,7 +8,7 @@ $database_name="artomoro";
 $db = mysqli_connect($hostname, $username, $password, $database_name);
 
 if($db->connect_error){
-    echo "Koneksi pedot";
+    echo "Koneksi Pedot";
     die();
 }
 

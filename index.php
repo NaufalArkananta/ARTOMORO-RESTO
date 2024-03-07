@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/indekstyle.css">
 </head>
 <body>
-    <?php include "nav.html" ?>
+    <?php include "nav.php" ?>
 
     <!-- Pencarian and banner -->
 

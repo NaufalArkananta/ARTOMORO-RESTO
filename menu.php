@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/stylemenu.css">
 </head>
 <body>
-    <?php include "nav.html" ?>
+    <?php include "nav.php" ?>
     <!-- img slider start -->
     <div class="banner">
       <div class="slider">
@@ -118,4 +118,4 @@
       <?php } ?>
     </div>
   </body>
-  </html>
+</html>
