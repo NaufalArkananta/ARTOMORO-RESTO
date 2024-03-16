@@ -1,3 +1,13 @@
+<?php
+    session_start();
+
+    if(isset($_POST['logout'])){
+        session_unset();
+        session_destroy();
+        header("location: index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,7 +40,17 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="index.php ">Tentang Kami</a></li>
         <li><a href="menu.php">Menu</a></li>
-        <li><a href="login.php"><i class="bx bxs-user"></i></a></li>
+        <li class="dropdown">
+          <a href="#"><i class="bx bxs-user"></i></a>
+          <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a href="login.php">Login</a>
+            <a href="register.php">Register</a>
+            <form action="nav.php" method="POST">
+              <button type="submit" name="logout">Logout</button>
+            </form>
+          </div>
+        </li>
       </ul>
     </header>
   </body>
