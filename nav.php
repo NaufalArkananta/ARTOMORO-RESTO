@@ -30,8 +30,7 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="index.php ">Tentang Kami</a></li>
         <li><a href="menu.php">Menu</a></li>
-        <li><a href="login.php"></a></li>
-        <i class="bx bxs-user"></i>
+        <li><a href="login.php"><i class="bx bxs-user"></i></a></li>
       </ul>
     </header>
   </body>

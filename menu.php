@@ -81,10 +81,10 @@
           <h2><?php echo $data_makanan['nama_menu'] ?></h2>
           <p><?php echo $data_makanan['deskripsi_menu'] ?></p>
           <h3>Rp. <?php echo $data_makanan['harga_menu'] ?></h3>
-          <button>Add</button>
+          <button type="submit">Add to Cart</button>
         </div>
-      <?php } ?>
-    </div>
+  <?php } ?>
+</div>
     <div class="kategorimenu">
       <h1>Minuman</h1>
     </div>

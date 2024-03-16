@@ -113,6 +113,7 @@ body {
 
 .kategorimenu {
   display: flex;
+  padding: 30px;
   justify-content: center;
   color: rgb(255, 255, 255);
 }
@@ -122,8 +123,9 @@ body {
 .container {
   /* Menengahkan kartu secara horizontal */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
+  grid-gap: 25px;
 }
 
 .card {
