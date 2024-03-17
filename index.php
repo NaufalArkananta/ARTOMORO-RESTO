@@ -22,7 +22,7 @@
     <!-- About Us -->
 
     <div class="Container-About">
-        <div class="about-us">
+        <div class="about-us" id="about-us">
             <h1>Tentang Kami</h1>
             <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo faucibus luctus. In nunc nisi, vehicula vitae felis et, molestie dignissim purus. Nam pharetra enim sem, at condimentum massa ultricies non. Nulla placerat lorem vitae purus accumsan blandit. Quisque vitae lacus ut orci tincidunt consectetur quis a elit. Suspendisse mauris dolor, porta ut nunc ac, varius sodales tortor. Donec sit amet nibh magna. Sed sit amet erat rutrum, condimentum mauris eget, sagittis lectus. Integer aliquet maximus vestibulum. Praesent ac magna ac ante pretium vulputate vitae et nulla. Ut eget auctor urna. Nam placerat faucibus interdum. </p>
         </div>

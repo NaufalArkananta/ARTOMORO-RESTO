@@ -38,7 +38,7 @@
 
       <ul class="navbar">
         <li><a href="index.php">Home</a></li>
-        <li><a href="index.php ">Tentang Kami</a></li>
+        <li><a href="index.php#about-us ">Tentang Kami</a></li>
         <li><a href="menu.php">Menu</a></li>
         <li class="dropdown">
           <a href="#"><i class="bx bxs-user"></i></a>
