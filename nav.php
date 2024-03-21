@@ -43,7 +43,7 @@
         <li class="dropdown">
           <a href="#"><i class="bx bxs-user"></i></a>
           <div class="dropdown-content">
-            <a href="#">Profile</a>
+            <a href="profile.php">Profile</a>
             <a href="login.php">Login</a>
             <a href="register.php">Register</a>
             <form action="nav.php" method="POST">
