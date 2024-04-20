@@ -1,11 +1,16 @@
 <?php
     session_start();
+    if($_SESSION["is_login"] != true){
+      header ("location:login.php");
+    }
 
     if(isset($_POST['logout'])){
         session_unset();
         session_destroy();
-        header("location: index.php");
+        header("location: login.php");
     }
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +39,7 @@
           background-color: #79480e;
         }
       </style>
-      <a href="#" class="Resto">ARTOMORO</a>
+      <a href="index.php" class="Resto">ARTOMORO</a>
 
       <ul class="navbar">
         <li><a href="index.php">Home</a></li>
@@ -44,11 +49,10 @@
           <a href="#"><i class="bx bxs-user"></i></a>
           <div class="dropdown-content">
             <a href="profile.php">Profile</a>
-            <a href="login.php">Login</a>
-            <a href="register.php">Register</a>
-            <form action="nav.php" method="POST">
-              <button type="submit" name="logout">Logout</button>
-            </form>
+            <a href="keranjang.php">Keranjang Saya</a>
+              <form action="nav.php" method="POST">
+                <button type="submit" name="logout">Logout</button>
+              </form>
           </div>
         </li>
       </ul>

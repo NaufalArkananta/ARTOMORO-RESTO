@@ -11,14 +11,22 @@
         $username = $_POST["username"];
         $email = $_POST["email"];
         $password = $_POST["password"];
-    
 
-        $sql = "INSERT INTO pelanggan (username_pelanggan, email_pelanggan, password_pelanggan) VALUES ('$username', '$email', '$password')";
-        if(mysqli_query($db, $sql)){
-            header("location:login.php");
+        if(empty($username) || empty($email) || empty($password)){
+            echo "  <script> 
+                        alert(' Data harus di isi! ')
+                        window.location.href = 'register.php' //ini untuk ketika kita pencet ok di alert akan href ke halaman tertentu 
+                    </script>";
         }
+        
         else{
-            echo "Register Failed".mysqli.error($db);
+            $sql = "INSERT INTO pelanggan (username_pelanggan, email_pelanggan, password_pelanggan) VALUES ('$username', '$email', '$password')";
+            if(mysqli_query($db, $sql)){
+                header("location:login.php");
+            }
+            else{
+                echo "Register Failed".mysqli.error($db);
+            }
         }
     }
 ?>

@@ -102,5 +102,7 @@
             <h2>Nasi Goreng</h2>
         </div>
     </div>
+    
+    <?php include "footer.php" ?>
 </body>
 </html>

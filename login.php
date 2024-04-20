@@ -2,30 +2,30 @@
     include "koneksi.php";
     session_start();
 
-    if(isset($_SESSION["is_login"])){
-        header ("location:index.php");
-    }
-
     if(isset($_POST['login'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
 
         $sql = "SELECT * FROM pelanggan WHERE username_pelanggan = '$username' AND password_pelanggan = '$password' ";
-        $result = $db ->query($sql);
+        $result = $db->query($sql);
 
-        if($result -> num_rows > 0){
+        if($result->num_rows > 0){
             $data = $result->fetch_assoc();
-            $_SESSION["username"] =$data["username"];
+            $_SESSION["username_pelanggan"] = $data["username_pelanggan"];
+            $_SESSION["id_pelanggan"] = $data["id_pelanggan"];
             $_SESSION["is_login"] = true;
 
-            header ("location:index.php");
+            header("location: index.php");
         }
         else{
-            echo "Akun tidak ada";
+            echo "<script> 
+                    alert('Akun tidak ditemukan')
+                    window.location.href = 'login.php'; //ini untuk ketika kita pencet ok di alert akan href ke halaman tertentu 
+                  </script>";
         }
     }
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

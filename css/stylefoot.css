@@ -9,7 +9,7 @@ body {
   box-sizing: border-box;
 }
 
-.container {
+.container-footer {
   min-width: 100%;
   margin: auto;
   position: relative;
