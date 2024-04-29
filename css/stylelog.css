@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("https://cdnwpedutorenews.gramedia.net/wp-content/uploads/2022/01/02203009/Rumah-Adat-Joglo-810x432.jpg");
+  background: url("https://ruangarsitek.id/wp-content/uploads/2020/10/Rumah-Adat-Joglo.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -46,12 +46,12 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 40px;
   font-size: 16px;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 20px 45px 20px 20px;
 }
 
 .input-box input::placeholder {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .input-box i {

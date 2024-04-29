@@ -1,3 +1,6 @@
+<?php 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +16,9 @@
 
     <div class="container-pencarian">
         <h2>Mau Cari Apa?</h2>
-        <form action="">
+        <form action="" method="$_POST">
             <input type="text" placeholder="Masukan menu yang mau di cari...">
-            <input type="submit" value="Cari">
+            <input type="submit" value="Cari" >
         </form>
     </div>
 
@@ -42,21 +45,21 @@
         </div>
         <div class="card">
             <div class="img-box">
-                <img src="img/nasi_goreng.jpg"\ alt="" />
+                <img src="img/mie_goreng.jpg"\ alt="" />
             </div>
-            <h2>Nasi Goreng</h2>
+            <h2>Mie Goreng</h2>
         </div>
         <div class="card">
             <div class="img-box">
-                <img src="img/nasi_goreng.jpg"\ alt="" />
+                <img src="img/mie_kuah.jpg"\ alt="" />
             </div>
-            <h2>Nasi Goreng</h2>
+            <h2>Mie Kuah</h2>
         </div>
         <div class="card">
             <div class="img-box">
-                <img src="img/nasi_goreng.jpg"\ alt="" />
+                <img src="img/nasi_pecel.jpg"\ alt="" />
             </div>
-            <h2>Nasi Goreng</h2>
+            <h2>Nasi Pecel</h2>
         </div>
         <div class="card">
             <div class="img-box">

@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 20px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+thead {
+  color: rgb(255, 255, 255);
+}
+
+table,
+th,
+td {
+  border: 1px solid #79480e;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #79480e;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}

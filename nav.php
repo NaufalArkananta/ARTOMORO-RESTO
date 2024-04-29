@@ -1,5 +1,5 @@
 <?php
-    session_start();
+  session_start();
     if($_SESSION["is_login"] != true){
       header ("location:login.php");
     }

@@ -1,5 +1,6 @@
 <?php 
   require "koneksi.php";
+  include "nav.php";
   $queryProduk = mysqli_query($db, "SELECT * FROM menu ");
   $sql_makanan = "SELECT * FROM menu WHERE id_kategori = '1'";
   $query_makanan = mysqli_query($db, $sql_makanan);
@@ -7,6 +8,30 @@
   $query_minuman = mysqli_query($db, $sql_minuman);
   $sql_lainnya = "SELECT * FROM menu WHERE id_kategori = '3'";
   $query_lainnya = mysqli_query($db, $sql_lainnya);
+
+  if (isset($_POST['add_to_cart'])){
+    $nama_menu=$_POST['nama_menu'];
+    $harga_menu=$_POST['harga_menu'];
+    $foto_menu=$_POST['foto_menu'];
+    $id_pelanggan= $_SESSION['id_pelanggan'];
+
+    $cek_keranjang=mysqli_query($db,"SELECT * FROM keranjang WHERE nama_menu='$nama_menu' AND id_pelanggan='$id_pelanggan'");
+    $row_count = mysqli_num_rows($cek_keranjang);
+
+    if($row_count>0){
+      $update_quantity=mysqli_query($db, "UPDATE keranjang SET quantity = quantity +1 WHERE nama_menu='$nama_menu' AND id_pelanggan = '$id_pelanggan'");
+    }
+
+    else{
+      $insert_to_cart=mysqli_query($db, "INSERT INTO keranjang (nama_menu,harga_menu,quantity,foto_menu,id_pelanggan) VALUES ('$nama_menu',$harga_menu,1,'$foto_menu','$id_pelanggan')");
+      echo "<script> 
+      alert('Menu berhasil ditambahkan')
+      </script>";
+    }
+
+
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +43,6 @@
     <link rel="stylesheet" href="css/stylemenu.css">
 </head>
 <body>
-    <?php include "nav.php" ?>
     <!-- img slider start -->
     <div class="banner">
       <div class="slider">
@@ -74,15 +98,20 @@
 </div>
 <div class="container">
   <?php while($data_makanan = mysqli_fetch_array($query_makanan)){ ?>
-        <div class="card">
-          <div class="img-box">
-            <img src="img/<?php echo $data_makanan['foto_menu'] ?>" alt="" />
-          </div>
-          <h2><?php echo $data_makanan['nama_menu'] ?></h2>
-          <p><?php echo $data_makanan['deskripsi_menu'] ?></p>
-          <h3>Rp. <?php echo $data_makanan['harga_menu'] ?></h3>
-          <button type="submit">Add to Cart</button>
+    <form method="POST" action="">
+      <div class="card">
+        <div class="img-box">
+          <img src="img/<?php echo $data_makanan['foto_menu'] ?>" alt="" />
         </div>
+        <h2><?php echo $data_makanan['nama_menu'] ?></h2>
+        <p><?php echo $data_makanan['deskripsi_menu'] ?></p>
+        <h3>Rp. <?php echo $data_makanan['harga_menu'] ?></h3>
+        <input type="hidden" name = "nama_menu" value="<?php echo $data_makanan['nama_menu'] ?>">
+        <input type="hidden" name = "harga_menu" value="<?php echo $data_makanan['harga_menu'] ?>">
+        <input type="hidden" name = "foto_menu" value="<?php echo $data_makanan['foto_menu'] ?>">
+        <button type="submit" name ="add_to_cart">Add to Cart</button>
+      </div>
+    </form>
   <?php } ?>
 </div>
     <div class="kategorimenu">
@@ -90,32 +119,42 @@
     </div>
     <div class="container">
   <?php while($data_minuman = mysqli_fetch_array($query_minuman)){ ?>
-        <div class="card">
-          <div class="img-box">
-            <img src="img/<?php echo $data_minuman['foto_menu'] ?>" alt="" />
-          </div>
-          <h2><?php echo $data_minuman['nama_menu'] ?></h2>
-          <p><?php echo $data_minuman['deskripsi_menu'] ?></p>
-          <h3>Rp. <?php echo $data_minuman['harga_menu'] ?></h3>
-          <button>Add</button>
+    <form method="POST" action="">
+      <div class="card">
+        <div class="img-box">
+          <img src="img/<?php echo $data_minuman['foto_menu'] ?>" alt="" />
         </div>
-      <?php } ?>
+        <h2><?php echo $data_minuman['nama_menu'] ?></h2>
+        <p><?php echo $data_minuman['deskripsi_menu'] ?></p>
+        <h3>Rp. <?php echo $data_minuman['harga_menu'] ?></h3>
+        <input type="hidden" name = "nama_menu" value="<?php echo $data_minuman['nama_menu'] ?>">
+        <input type="hidden" name = "harga_menu" value="<?php echo $data_minuman['harga_menu'] ?>">
+        <input type="hidden" name = "foto_menu" value="<?php echo $data_minuman['foto_menu'] ?>">
+        <button type="submit" name ="add_to_cart">Add to Cart</button>
+      </div>
+    </form>
+  <?php } ?>
     </div>
     <div class="kategorimenu">
       <h1>Lainnya</h1>
     </div>
     <div class="container">
   <?php while($data_lainnya = mysqli_fetch_array($query_lainnya)){ ?>
-        <div class="card">
-          <div class="img-box">
-            <img src="img/<?php echo $data_lainnya['foto_menu'] ?>" alt="" />
-          </div>
-          <h2><?php echo $data_lainnya['nama_menu'] ?></h2>
-          <p><?php echo $data_lainnya['deskripsi_menu'] ?></p>
-          <h3>Rp. <?php echo $data_lainnya['harga_menu'] ?></h3>
-          <button>Add</button>
+    <form action="" method="POST">
+      <div class="card">
+        <div class="img-box">
+          <img src="img/<?php echo $data_lainnya['foto_menu'] ?>" alt="" />
         </div>
-      <?php } ?>
+        <h2><?php echo $data_lainnya['nama_menu'] ?></h2>
+        <p><?php echo $data_lainnya['deskripsi_menu'] ?></p>
+        <h3>Rp. <?php echo $data_lainnya['harga_menu'] ?></h3>
+        <input type="hidden" name = "nama_menu" value="<?php echo $data_lainnya['nama_menu'] ?>">
+        <input type="hidden" name = "harga_menu" value="<?php echo $data_lainnya['harga_menu'] ?>">
+        <input type="hidden" name = "foto_menu" value="<?php echo $data_lainnya['foto_menu'] ?>">
+        <button type="submit" name ="add_to_cart">Add to Cart</button>
+      </div>
+    </form>
+  <?php } ?>
     </div>
     <?php include"footer.php" ?>
   </body>

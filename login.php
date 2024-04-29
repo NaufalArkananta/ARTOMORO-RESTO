@@ -41,12 +41,12 @@
         <form action="login.php" method="POST">
             <h1>Login</h1>
             <div class="input-box">
-                <input type="text" placeholder="Username" name="username" require>
+                <input type="text" placeholder="Username" name="username" required>
                 <i class='bx bxs-user'></i>
             </div>
             
             <div class="input-box">
-                <input type="password" placeholder="Password" name="password" require>
+                <input type="password" placeholder="Password" name="password" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
 
